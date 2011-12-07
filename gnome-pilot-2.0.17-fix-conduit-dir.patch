@@ -1,0 +1,24 @@
+diff -up gnome-pilot-2.0.17/gpilotd/Makefile.am.fix-conduit-dir gnome-pilot-2.0.17/gpilotd/Makefile.am
+--- gnome-pilot-2.0.17/gpilotd/Makefile.am.fix-conduit-dir	2009-01-08 13:40:33.000000000 -0500
++++ gnome-pilot-2.0.17/gpilotd/Makefile.am	2009-01-08 13:40:43.000000000 -0500
+@@ -9,7 +9,7 @@ INCLUDES = 							\
+ 	-DGP_PILOT_LINK_VERSION=\"@PILOT_LINK_VERSION@\" 	\
+ 	-DDEVICE_XML_DIR=\"$(datadir)/gnome-pilot\" 	\
+ 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		\
+-	-DCONDUITDIR=\"$(datadir)\"				\
++	-DCONDUITDIR=\"$(libdir)\"				\
+ 	$(GNOME_PILOT_CFLAGS)	
+ 
+ gpmarshal.h: gpmarshal.list
+diff -up gnome-pilot-2.0.17/gpilotd/Makefile.in.fix-conduit-dir gnome-pilot-2.0.17/gpilotd/Makefile.in
+--- gnome-pilot-2.0.17/gpilotd/Makefile.in.fix-conduit-dir	2009-01-08 13:41:03.000000000 -0500
++++ gnome-pilot-2.0.17/gpilotd/Makefile.in	2009-01-08 13:41:16.000000000 -0500
+@@ -335,7 +335,7 @@ INCLUDES = \
+ 	-DGP_PILOT_LINK_VERSION=\"@PILOT_LINK_VERSION@\" 	\
+ 	-DDEVICE_XML_DIR=\"$(datadir)/gnome-pilot\" 	\
+ 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" 		\
+-	-DCONDUITDIR=\"$(datadir)\"				\
++	-DCONDUITDIR=\"$(libdir)\"				\
+ 	$(GNOME_PILOT_CFLAGS)	
+ 
+ gpilotdlibsdir = $(libdir)
